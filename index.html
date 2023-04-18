@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Rendu monnaie</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>Rendu monnaie</h3>
+      <div class="container">
+        <div class="input">
+          <label for="amount">Montant à rendre</label>
+          <input type="text" id="amount" />
+        </div>
+        <div>
+          <button id="btn">Calculer</button>
+        </div>
+        <p id="border"></p>
+      </div>
+      <div class="render">
+        <div id="rendering" class="render__item">
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
