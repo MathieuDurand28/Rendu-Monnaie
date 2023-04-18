@@ -1,3 +1,5 @@
+export {}
+
 const button = document.getElementById('btn')
 
 interface Props {
