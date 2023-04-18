@@ -27,16 +27,15 @@ button?.addEventListener('click', () => {
  */
 const getAmountMoneyToRender = () => {
   let text_amount = getValue('amount').replace(',', '.') // replace comma to dot
-  const amount = Number(text_amount)
-  let finalAmount = Number(amount.toFixed(2))
+  let amount = Number(text_amount)
   const billets = [500,200,100,50,20,10,5,2,1,0.5,0.2,0.1,0.05,0.02,0.01]
   
   const renderArray: Array<Props> = billets.map((item) => {
     let billNumber = 0
-
-    if (item <= finalAmount) {
-      while (item <= finalAmount) {
-        finalAmount = Number(finalAmount.toFixed(2)) - item
+    
+    if (item <= Number(amount.toFixed(2))) {
+      while (item <= Number(amount.toFixed(2))) {
+        amount = Number(amount.toFixed(2)) - item
         billNumber++
       }
       return {
